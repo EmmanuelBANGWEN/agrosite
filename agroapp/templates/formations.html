@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formations en Agriculture et Développement Durable</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for a modern design */
+        .formation-section {
+            padding: 60px 0;
+            background-color: #f4f4f4;
+        }
+        .formation-card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .formation-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        .formation-card img {
+            border-radius: 10px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .formation-card-body {
+            background-color: #fff;
+            border-radius: 0 0 10px 10px;
+            padding: 30px;
+        }
+        .formation-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #006400;
+        }
+        .formation-description {
+            color: #333;
+            font-size: 1.1rem;
+        }
+        .formation-button {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .formation-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="formation-section">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col">
+                    <h2 class="display-4">Nos Formations en Agriculture et Développement Durable</h2>
+                    <p class="lead">Des formations adaptées à vos besoins pour un avenir durable dans l'agriculture.</p>
+                </div>
+            </div>
+            
+        
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card formation-card">
+                        <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Formation en Agriculture">
+                        <div class="card-body formation-card-body">
+                            <h5 class="formation-title">Formation en Agriculture Durable</h5>
+                            <p class="formation-description">
+                                Découvrez les pratiques agricoles durables pour une production respectueuse de l'environnement et profitable à long terme.
+                            </p>
+                            <a href="#" class="formation-button text-white">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card formation-card">
+                        <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Formation en Développement Durable">
+                        <div class="card-body formation-card-body">
+                            <h5 class="formation-title">Formation en Développement Durable</h5>
+                            <p class="formation-description">
+                                Apprenez les clés du développement durable, de l'économie circulaire à la gestion des ressources naturelles.
+                            </p>
+                            <a href="#" class="formation-button text-white">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-md-4">
+                    <div class="card formation-card">
+                        <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Formation en Technologie Agricole">
+                        <div class="card-body formation-card-body">
+                            <h5 class="formation-title">Formation en Technologie Agricole</h5>
+                            <p class="formation-description">
+                                Maîtrisez l'utilisation des nouvelles technologies pour améliorer l'efficacité et la rentabilité des exploitations agricoles.
+                            </p>
+                            <a href="#" class="formation-button text-white">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+{% endblock content %}

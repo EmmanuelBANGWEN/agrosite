@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<div class="hero-section text-center py-5 position-relative">
+    <div class="background-overlay"></div>
+    <div class="container position-relative z-2">
+        <h1 class="display-4 text-white fw-bold">Révolutionnons l'Agroalimentaire avec Passion et Innovation</h1>
+        <p class="lead text-white">Produits frais, formation d'excellence et accompagnement financier pour un avenir durable</p>
+        <a href="{% url 'produits' %}" class="btn btn-success btn-lg mt-3">
+            <i class="fas fa-seedling me-2"></i> Découvrir nos produits
+        </a>
+    </div>
+</div>
+
+<style>
+.hero-section {
+    background: url('{% static 'img/ghh07.jpg' %}') center/cover no-repeat;
+    min-height: 450px;
+}
+.hero-section .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+</style>
+
+<!-- Présentation -->
+<div class="py-5 text-center">
+    <div class="container">
+        <h1 class="display-4 text-success fw-bold">African Green Food</h1>
+        <p class="lead text-black-50">L'agriculture de demain commence ici</p>
+        <p>Nous mettons l'innovation au service des agriculteurs et des consommateurs pour une alimentation plus saine et un avenir plus vert.</p>
+    </div>
+</div>
+
+<!-- Services -->
+<div class="features-section py-5">
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-5">
+                <a href="{% url 'produits' %}" class="card service-card text-white">
+                    <div class="card-body text-center">
+                        <i class="fas fa-apple-alt fa-3x mb-3"></i>
+                        <h3>Produits Frais</h3>
+                        <p>La nature à votre table : fraîcheur, qualité et saveur garanties.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-5">
+                <a href="{% url 'formations' %}" class="card service-card text-white">
+                    <div class="card-body text-center">
+                        <i class="fas fa-chalkboard-teacher fa-3x mb-3"></i>
+                        <h3>Formations</h3>
+                        <p>Apprenez, innovez et transformez votre agriculture avec nos experts.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-5">
+                <a href="{% url 'financement' %}" class="card service-card text-white">
+                    <div class="card-body text-center">
+                        <i class="fas fa-hand-holding-usd fa-3x mb-3"></i>
+                        <h3>Financement de projets</h3>
+                        <p>Nous donnons vie à vos idées en soutenant vos ambitions agricoles.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.service-card {
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+.service-card:hover {
+    transform: scale(1.05);
+}
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+.service-card .card-body {
+    position: relative;
+    z-index: 2;
+}
+.features-section .col-md-5:nth-child(1) .service-card {
+    background-image: url('{% static "img/g2.webp" %}');
+}
+.features-section .col-md-5:nth-child(2) .service-card {
+    background-image: url('{% static "img/g4.webp" %}');
+}
+.features-section .col-md-5:nth-child(3) .service-card {
+    background-image: url('{% static "img/ghh02.jpg" %}');
+}
+a {
+    text-decoration: none;
+}
+</style>
+
+{% endblock %}

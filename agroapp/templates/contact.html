@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="main">
+
+    <!-- En-tête avec logo et titre -->
+    <div class="page-title dark-background d-flex align-items-center" data-aos="fade" style="background-image: url('{% static "assets/img/page-title-bg.webp" %}');">
+        <div class="container position-relative d-flex align-items-center justify-content-between">
+            <h1 class="fw-bold text-white m-0">Contactez-nous</h1>
+        </div>
+    </div>
+    <!-- Fin de l'en-tête -->
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact section py-5">
+        <div class="container" data-aos="fade-up">
+            <div class="row gy-5 gx-lg-5">
+                
+                <!-- Informations de contact -->
+                <div class="col-lg-4">
+                    <div class="card shadow-lg border-0 p-4">
+                        <h3 class="text-success"><i class="bi bi-info-circle"></i> Informations</h3>
+                        <p>Vous avez des questions ? Contactez-nous via les informations ci-dessous.</p>
+                        
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-geo-alt fs-4 text-success me-3"></i>
+                            <p class="mb-0">Cameroun, Yaoundé</p>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-envelope fs-4 text-success me-3"></i>
+                            <p class="mb-0">bikoyemmanuel531@gmail.com</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-phone fs-4 text-success me-3"></i>
+                            <p class="mb-0">+237 655 372 703</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Formulaire de contact -->
+                <div class="col-lg-8">
+                    <div class="card shadow-lg border-0 p-4">
+                        <h3 class="text-success"><i class="bi bi-chat-dots"></i> Envoyez-nous un message</h3>
+                        
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-danger{% endif %} alert-dismissible fade show mt-3" role="alert">
+                                    {{ message }}
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+
+                        <form method="post" action="{% url 'contact' %}" class="mt-4">
+                            {% csrf_token %}
+                            
+                            <div class="mb-3">
+                                <label for="name" class="form-label fw-semibold"><i class="bi bi-person"></i> Nom</label>
+                                <input type="text" class="form-control border-success" id="name" name="name" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label fw-semibold"><i class="bi bi-envelope"></i> Adresse Email</label>
+                                <input type="email" class="form-control border-success" id="email" name="email" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="subject" class="form-label fw-semibold"><i class="bi bi-pencil"></i> Numéro</label>
+                                <input type="number" class="form-control border-success" id="subject" name="subject" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="message" class="form-label fw-semibold"><i class="bi bi-chat-text"></i> Message</label>
+                                <textarea class="form-control border-success" id="message" name="message" rows="4" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-success w-100 py-2">
+                                <i class="bi bi-send"></i> Envoyer le message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Fin de la section Contact -->
+
+    <!-- Message additionnel -->
+    <section class="info-section py-5 text-center">
+        <div class="container">
+            <h2 class="text-success">Nous sommes là pour vous aider !</h2>
+            <p>Contactez-nous pour toute question ou demande, et nous vous répondrons dans les plus brefs délais.</p>
+        </div>
+    </section>
+
+</main>
+{% endblock %}

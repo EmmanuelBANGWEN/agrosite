@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<body>
+    <section class="container py-5">
+        <!-- Titre principal -->
+        <h1 class="text-center fw-bold text-success">
+            <i class="bi bi-shop"></i> Nos Produits
+        </h1>
+        <p class="text-center text-muted">Découvrez notre gamme de produits 100% naturels, cultivés avec soin pour une qualité irréprochable.</p>
+
+        <!-- Produit 1 -->
+        <div class="row align-items-center mt-5">
+            <div class="col-md-6">
+                <h2 class="fw-bold text-success">Produit 1 <i class="bi bi-leaf"></i></h2>
+                <p class="text-muted">Un produit d'exception, entièrement naturel, conçu pour votre bien-être.</p>
+                <div class="buy_bt mt-3">
+                    <a href="{% url 'redirection_whatsapp1' %}" class="btn btn-success text-white">
+                        <i class="bi bi-cart"></i> Acheter
+                    </a>
+                </div>
+                <style>
+                    .btn-success {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-success:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 128, 0, 0.4);
+}
+
+                </style>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'img/ghh02.jpg' %}" class="img-fluid rounded shadow" alt="Produit 1">
+            </div>
+        </div>
+
+        <!-- Produit 2 -->
+        <div class="row align-items-center flex-md-row-reverse mt-5">
+            <div class="col-md-6">
+                <h2 class="fw-bold text-success">Produit 2 <i class="bi bi-flower1"></i></h2>
+                <p class="text-muted">Une excellence biologique qui respecte votre santé et l'environnement.</p>
+                <div class="buy_bt mt-3">
+                    <a href="{% url 'redirection_whatsapp2' %}" class="btn btn-success text-white"><i class="bi bi-cart"></i> Acheter</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'img/ghh02.jpg' %}" class="img-fluid rounded shadow" alt="Produit 2">
+            </div>
+        </div>
+
+        <!-- Produit 3 -->
+        <div class="row align-items-center mt-5">
+            <div class="col-md-6">
+                <h2 class="fw-bold text-success">Produit 3 <i class="bi bi-sun"></i></h2>
+                <p class="text-muted">Des ingrédients soigneusement sélectionnés pour une qualité optimale.</p>
+                <div class="buy_bt mt-3">
+                    <a href="{% url 'redirection_whatsapp3' %}" class="btn btn-success text-white"><i class="bi bi-cart"></i> Acheter</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'img/ghh02.jpg' %}" class="img-fluid rounded shadow" alt="Produit 3">
+            </div>
+        </div>
+
+        <!-- Produit 4 -->
+        <div class="row align-items-center flex-md-row-reverse mt-5">
+            <div class="col-md-6">
+                <h2 class="fw-bold text-success">Produit 4 <i class="bi bi-droplet"></i></h2>
+                <p class="text-muted">Laissez-vous séduire par un produit authentique et raffiné.</p>
+                <div class="buy_bt mt-3">
+                    <a href="{% url 'redirection_whatsapp4' %}" class="btn btn-success text-white"><i class="bi bi-cart"></i> Acheter</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'img/ghh02.jpg' %}" class="img-fluid rounded shadow" alt="Produit 4">
+            </div>
+        </div>
+
+        <!-- Produit 5 -->
+        <div class="row align-items-center mt-5">
+            <div class="col-md-6">
+                <h2 class="fw-bold text-success">Produit 5 <i class="bi bi-tree"></i></h2>
+                <p class="text-muted">Une expérience gustative unique avec un produit d’exception.</p>
+                <div class="buy_bt mt-3">
+                    <a href="{% url 'redirection_whatsapp5' %}" class="btn btn-success text-white"><i class="bi bi-cart"></i> Acheter</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'img/ghh02.jpg' %}" class="img-fluid rounded shadow" alt="Produit 5">
+            </div>
+        </div>
+
+        <!-- Produit 6 -->
+        <div class="row align-items-center flex-md-row-reverse mt-5">
+            <div class="col-md-6">
+                <h2 class="fw-bold text-success">Produit 6 <i class="bi bi-stars"></i></h2>
+                <p class="text-muted">La perfection de la nature, mise à votre disposition.</p>
+                <div class="buy_bt mt-3">
+                    <a href="{% url 'redirection_whatsapp6' %}" class="btn btn-success text-white"><i class="bi bi-cart"></i> Acheter</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'img/ghh02.jpg' %}" class="img-fluid rounded shadow" alt="Produit 6">
+            </div>
+        </div>
+    </section>
+</body>
+{% endblock content %}
+
+
+<style>
+    .btn-success {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-success:hover {
+transform: scale(1.1);
+box-shadow: 0 5px 15px rgba(0, 128, 0, 0.4);
+}
+
+</style>
