@@ -36,14 +36,14 @@
         .financement-title {
             font-size: 1.6rem;
             font-weight: bold;
-            color: #007b5e;
+            color: #006400;
         }
         .financement-description {
             color: #555;
             font-size: 1.1rem;
         }
         .financement-button {
-            background-color: #007b5e;
+            background-color: #28a745;
             color: #fff;
             padding: 10px 20px;
             border-radius: 5px;
@@ -51,11 +51,11 @@
             font-weight: bold;
         }
         .financement-button:hover {
-            background-color: #005f42;
+            background-color: #28a745;
         }
         .icon-style {
             font-size: 3rem;
-            color: #007b5e;
+            color: #28a745;
         }
         .contact-form {
             padding: 60px 0;
@@ -65,7 +65,7 @@
             margin-bottom: 1.5rem;
         }
         .contact-form button {
-            background-color: #007b5e;
+            background-color: #28a745;
             color: white;
             font-weight: bold;
             padding: 12px 30px;
@@ -73,7 +73,7 @@
             width: 100%;
         }
         .contact-form button:hover {
-            background-color: #005f42;
+            background-color: #28a745;
 
     
         }
@@ -88,7 +88,7 @@
             <div class="row text-center mb-5">
                 <div class="col">
                     <h2 class="display-4">Financement des Projets Agricoles et Durables</h2>
-                    <p class="lead">Des solutions de financement adaptées pour soutenir vos projets agricoles et de développement durable.</p>
+                    <p class="text-center text-muted fs-5">Des solutions de financement adaptées pour soutenir vos projets agricoles et de développement durable.</p>
                 </div>
             </div>
             
@@ -99,10 +99,10 @@
                         <div class="card-body text-center">
                             <i class="fas fa-hand-holding-usd icon-style"></i>
                             <h5 class="financement-title">Subventions Agricoles</h5>
-                            <p class="financement-description">
+                            <p class="text-center text-muted fs-5" class="financement-description">
                                 Bénéficiez de subventions gouvernementales pour le financement de projets agricoles qui respectent les principes de durabilité.
                             </p>
-                            <a href="#" class="financement-button text-white">Infos subvention <i class="fas fa-arrow-right"></i></a>
+                            <a href="{% url 'subventions' %}" class="financement-button text-white">Infos subvention <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -112,10 +112,10 @@
                         <div class="card-body text-center">
                             <i class="fas fa-credit-card icon-style"></i>
                             <h5 class="financement-title">Prêts à Faible Taux</h5>
-                            <p class="financement-description">
+                            <p class="text-center text-muted fs-5" class="financement-description">
                                 Profitez de prêts à faible taux pour financer l'achat d'équipements modernes ou l'amélioration de vos installations agricoles.
                             </p>
-                            <a href="#" class="financement-button text-white">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                            <a href="{% url 'pret' %}" class="financement-button text-white">En savoir plus <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -125,10 +125,10 @@
                         <div class="card-body text-center">
                             <i class="fas fa-handshake icon-style"></i>
                             <h5 class="financement-title">Investissements & Partenariats</h5>
-                            <p class="financement-description">
+                            <p class="text-center text-muted fs-5" class="financement-description">
                                 Recherchez des investisseurs ou des partenariats stratégiques pour financer des projets agricoles innovants et durables.
                             </p>
-                            <a href="#" class="financement-button text-white">Explorer les opportunités <i class="fas fa-arrow-right"></i></a>
+                            <a href="{% url 'investisseur' %}" class="financement-button text-white">Explorer les opportunités <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -138,8 +138,8 @@
             <div class="row text-center mt-5">
                 <div class="col">
                     <h3>Transformez vos idées en projets durables.</h3>
-                    <p>Explorez nos solutions de financement et donnez vie à vos projets agricoles pour un avenir plus vert et plus prospère.</p>
-                    <a href="#" class="btn btn-lg btn-success text-white">Contactez-nous pour plus d'informations</a>
+                    <p class="text-center text-muted fs-5">Explorez nos solutions de financement et donnez vie à vos projets agricoles pour un avenir plus vert et plus prospère.</p>
+                    <!-- <a href="#" class="btn btn-lg btn-success text-white">Contactez-nous pour plus d'informations</a> -->
                 </div>
             </div>
         </div>
@@ -150,7 +150,8 @@
         <div class="container">
             <h2 class="text-center mb-4">Contactez-nous</h2>
             <p class="text-center mb-5">Si vous avez des questions ou souhaitez plus d'informations sur nos solutions de financement, remplissez le formulaire ci-dessous.</p>
-            <form method="post" action="{% url 'financement' %}" >
+            <!-- <form method="post" action="{% url 'financement' %}" > -->
+            <form action="{% url 'financement' %}" method="post" class="py-email-form" data-aos="fade-up" data-aos-delay="200">
                 {% csrf_token %}
               {% if messages %}
                 <div class="alert alert-success">
@@ -162,20 +163,24 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="name">Nom complet</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom complet" required>
+                            <label for="name-field" class="pb-2">Nom</label>
+                            <input type="text" class="form-control" id="name" name="name" value="{{ form.name.value|default:'' }}" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Votre email" required>
+                            <label for="email-field" class="pb-2">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" value="{{ form.email.value|default:'' }}" required>
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Votre message" required></textarea>
+                    <label for="number-field" class="pb-2">Numéro</label>
+                    <input type="text" class="form-control" id="number" name="number" value="{{ form.number.value|default:'' }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="message-field" class="pb-2">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required>{{ form.message.value|default:'' }}</textarea>
                 </div>
                 <button type="submit" class="btn btn-lg btn-success">Envoyer votre message</button>
             </form>

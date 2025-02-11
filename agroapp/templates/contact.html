@@ -7,7 +7,6 @@
     <!-- En-tête avec logo et titre -->
     <div class="page-title dark-background d-flex align-items-center" data-aos="fade" style="background-image: url('{% static "assets/img/page-title-bg.webp" %}');">
         <div class="container position-relative d-flex align-items-center justify-content-between">
-            <h1 class="fw-bold text-white m-0">Contactez-nous</h1>
         </div>
     </div>
     <!-- Fin de l'en-tête -->
@@ -57,25 +56,25 @@
                             
                             <div class="mb-3">
                                 <label for="name" class="form-label fw-semibold"><i class="bi bi-person"></i> Nom</label>
-                                <input type="text" class="form-control border-success" id="name" name="name" required>
+                                <input type="text" class="form-control" id="name" name="name" value="{{ form.name.value|default:'' }}" required>
                             </div>
 
                             <div class="mb-3">
                                 <label for="email" class="form-label fw-semibold"><i class="bi bi-envelope"></i> Adresse Email</label>
-                                <input type="email" class="form-control border-success" id="email" name="email" required>
+                                <input type="email" class="form-control" id="email" name="email" value="{{ form.email.value|default:'' }}" required>
                             </div>
 
                             <div class="mb-3">
                                 <label for="subject" class="form-label fw-semibold"><i class="bi bi-pencil"></i> Numéro</label>
-                                <input type="number" class="form-control border-success" id="subject" name="subject" required>
+                                <input type="text" class="form-control" id="number" name="number" value="{{ form.number.value|default:'' }}" required>
                             </div>
 
                             <div class="mb-3">
                                 <label for="message" class="form-label fw-semibold"><i class="bi bi-chat-text"></i> Message</label>
-                                <textarea class="form-control border-success" id="message" name="message" rows="4" required></textarea>
+                                <textarea class="form-control" id="message" name="message" rows="4" required>{{ form.message.value|default:'' }}</textarea>
                             </div>
 
-                            <button type="submit" class="btn btn-success w-100 py-2">
+                            <button type="submit" class="btn btn-success w-100 py-2 ">
                                 <i class="bi bi-send"></i> Envoyer le message
                             </button>
                         </form>
