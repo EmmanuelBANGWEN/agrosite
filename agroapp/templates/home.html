@@ -13,7 +13,7 @@
         color: #28a745;
         }
     </style>
-    <div class="container position-relative z-2">
+    <div id="home" class="container position-relative z-2">
         <h1 class="display-1 text-white fw-bold">African Green Food</h1>
         <h3 class=" text-white fw-bold">Nourrir l'Afrique, Cultiver l'Avenir</h3>
         <p class="ggg lead text-white">Découvrez comment nous transformons l'agriculture africaine grâce à des pratiques durables et des produits d'exception</p>
@@ -86,7 +86,7 @@
 </div>
 
 <style>
-.service-card {
+.service-carde {
     background-size: cover;
     background-position: center;
     height: 350px;
@@ -95,7 +95,7 @@
     transition: transform 0.3s ease-in-out;
     overflow: hidden;
 }
-.service-card:hover {
+.service-carde:hover {
     transform: scale(1.05);
 }
 .service-card::before {
@@ -125,5 +125,425 @@ a {
     text-decoration: none;
 }
 </style>
+
+
+<section id="about" class="container py-5">
+    <!-- Titre principal -->
+    <h1 class="text-center fw-bold text-success">Qui sommes-nous ?</h1>
+
+    <!-- Première section avec texte et image -->
+    <div class="row align-items-center mt-4">
+        <div class="col-md-6">
+            <h2 class="fw-bold text-success">Notre Mission</h2>
+            <p class="text-muted fs-5">
+                African Green Food est une entreprise agro-industrielle engagée dans la promotion de l'agriculture durable et la transformation de produits agricoles de haute qualité.
+
+Notre mission est de nourrir l'Afrique en créant des emplois et en valorisant les ressources locales.
+
+            </p>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'img/ghh02.jpg' %}" class="img-fluid rounded shadow" alt="Mission Image">
+        </div>
+    </div>
+
+    <!-- Deuxième section avec texte et image -->
+    <div class="row align-items-center flex-md-row-reverse mt-4">
+        <div class="col-md-6">
+            <h2 class="fw-bold text-success">Notre Histoire</h2>
+            <p class="text-muted fs-5">
+                Depuis notre création en <strong>2024</strong>, nous avons mis l’accent sur 
+                l'innovation et la durabilité pour offrir des produits naturels et savoureux.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'img/ghh02.jpg' %}" class="img-fluid rounded shadow" alt="History Image">
+        </div>
+    </div>
+
+    <!-- Troisième section : Nos Valeurs -->
+    <div class="bg-light p-4 mt-5 rounded">
+        <h2 class="text-center fw-bold text-success">Nos Valeurs</h2>
+        <div class="row text-center mt-4">
+            <div class="col-md-4">
+                <i class="bi bi-tree-fill text-success" style="font-size: 3rem;"></i>
+                <h5 class="fw-bold mt-2">Agriculture Durable</h5>
+                <p class="text-center text-muted fs-5">Nous encourageons une agriculture respectueuse de l'environnement.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-basket2-fill text-warning" style="font-size: 3rem;"></i>
+                <h5 class="fw-bold mt-2">Qualité et Fraîcheur</h5>
+                <p class="text-center text-muted fs-5">Nous garantissons des produits sains et naturels.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-people-fill text-primary" style="font-size: 3rem;"></i>
+                <h5 class="fw-bold mt-2">Soutien aux Agriculteurs</h5>
+                <p class="text-center text-muted fs-5">Nous finançons et formons les jeunes agriculteurs.</p>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+<section id="services" class="container py-5">
+    <h2 class="text-center fw-bold text-success">Nos Services</h2>
+    <p class="text-center text-muted fs-5">
+        Chez <strong>African Green Food</strong>, nous nous engageons à transformer l’agriculture et l’agroalimentaire avec des solutions innovantes et durables.
+    </p>
+            <div class="row text-center mt-5">
+        <div class="col-md-4">
+            <div class="card text-center p-4 service-carde shadow">
+                <i class="fas fa-leaf fa-3x text-success mb-3"></i>
+                <h4 class="fw-bold">Vente de Produits Frais</h4>
+                <p>Des produits agricoles bio, cultivés avec soin pour garantir fraîcheur et qualité directement du champ à votre table.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center p-4 service-carde shadow">
+                <i class="fas fa-chalkboard-teacher fa-3x text-primary mb-3"></i>
+                <h4 class="fw-bold">Formations</h4>
+                <p>Des formations pratiques pour vous permettre de maîtriser les nouvelles techniques agricoles et agroalimentaires durables.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center p-4 service-carde shadow">
+                <i class="fas fa-hand-holding-usd fa-3x text-warning mb-3"></i>
+                <h4 class="fw-bold">Financements de Projets</h4>
+                <p>Chez <strong>Agri-Connekt Invest</strong> nous offrons un accompagnement sur mesure pour financer vos projets et booster l'innovation dans l'agriculture et l'agroalimentaire.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<section id="formations" class="formation-section">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col">
+                <h2 class="display-4">Développez Vos Compétences en Agriculture Durable</h2>
+                <p class="text-center text-muted fs-5">Des formations adaptées à vos besoins pour un avenir durable dans l'agriculture.</p>
+            </div>
+        </div>
+        
+    
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card formation-card">
+                    <img src="{% static 'img/ghh07.jpg' %}" class="card-img-top" alt="Formation en Agriculture">
+                    <div class="card-body formation-card-body">
+                        <h5 class="formation-title">Hygiène et Sécurité Alimentaire</h5>
+                        <p class="text-muted fs-5" class="formation-description">
+                            Application des normes d'hygiène et de sécurité alimentaire, prévention des risques de contamination, gestion de la qualité des produits alimentaires.                            </p>
+                        <!-- <a href="{% url 'agri_durable' %}" class="formation-button text-white">En savoir plus <i class="fas fa-arrow-right"></i></a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card formation-card">
+                    <img src="{% static 'img/ghh07.jpg' %}" class="card-img-top" alt="Formation en Développement Durable">
+                    <div class="card-body formation-card-body">
+                        <h5 class="formation-title">Agriculture Urbaine - Aquaponie</h5>
+                        <p class="text-muted fs-5" class="formation-description">
+                            Maîtrise des techniques d'agriculture biologique en milieu urbain, conception et gestion de systèmes aquaponiques, production de fruits et légumes sains et locaux.
+                        </p>
+                        <!-- <a href="{% url 'dev_durable' %}" class="formation-button text-white">En savoir plus <i class="fas fa-arrow-right"></i></a> -->
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-md-4">
+                <div class="card formation-card">
+                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Formation en Technologie Agricole">
+                    <div class="card-body formation-card-body">
+                        <h5 class="formation-title">Formation en Technologie Agricole</h5>
+                                            <p class="text-muted fs-5" class="formation-description">
+                            Maîtrisez l'utilisation des nouvelles technologies pour améliorer l'efficacité et la rentabilité des exploitations agricoles.
+                        </p>
+                        <a href="#" class="formation-button text-white">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Custom CSS for a modern design */
+    .formation-section {
+        padding: 60px 0;
+        background-color: #f4f4f4;
+    }
+    .formation-card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .formation-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+    .formation-card img {
+        border-radius: 10px;
+        height: 200px;
+        object-fit: cover;
+    }
+    .formation-card-body {
+        background-color: #fff;
+        border-radius: 0 0 10px 10px;
+        padding: 30px;
+    }
+    .formation-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #006400;
+    }
+    .formation-description {
+        color: #333;
+        font-size: 1.1rem;
+    }
+    .formation-button {
+        background-color: #28a745;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .formation-button:hover {
+        background-color: #218838;
+    }
+
+
+
+    
+    /* Custom CSS for a modern design */
+    .financement-section {
+        padding: 60px 0;
+        background-color: #f9f9f9;
+    }
+    .financement-card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .financement-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+    .financement-card-body {
+        background-color: #fff;
+        border-radius: 0 0 10px 10px;
+        padding: 30px;
+    }
+    .financement-title {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: #006400;
+    }
+    .financement-description {
+        color: #555;
+        font-size: 1.1rem;
+    }
+    .financement-button {
+        background-color: #28a745;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .financement-button:hover {
+        background-color: #28a745;
+    }
+    .icon-style {
+        font-size: 3rem;
+        color: #28a745;
+    }
+    .contact-form {
+        padding: 60px 0;
+        background-color: #fff;
+    }
+    .contact-form .form-group {
+        margin-bottom: 1.5rem;
+    }
+    .contact-form button {
+        background-color: #28a745;
+        color: white;
+        font-weight: bold;
+        padding: 12px 30px;
+        border-radius: 5px;
+        width: 100%;
+    }
+    .contact-form button:hover {
+        background-color: #28a745;
+
+
+    }
+    .financement-button{
+        text-decoration: none; /* Supprime le soulignement */}
+</style>
+
+
+<section id="financement" class="financement-section">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col">
+                <h2 class="display-4">Investissez dans l'Avenir de l'Agriculture Africaine</h2>
+                <p class="text-center text-muted fs-5">Rejoignez <strong>Agri-Connekt Invest</strong> et aidez-nous à nourrir l'Afrique tout en créant des emplois durables.</p>
+            </div>
+        </div>
+        
+        <!-- <div class="row">
+
+            <div class="col-md-4">
+                <div class="card financement-card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-hand-holding-usd icon-style"></i>
+                        <h5 class="financement-title">Subventions Agricoles</h5>
+                        <p class="text-center text-muted fs-5" class="financement-description">
+                            Bénéficiez de subventions gouvernementales pour le financement de projets agricoles qui respectent les principes de durabilité.
+                        </p>
+                        <a href="{% url 'subventions' %}" class="financement-button text-white">Infos subvention <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card financement-card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-credit-card icon-style"></i>
+                        <h5 class="financement-title">Prêts à Faible Taux</h5>
+                        <p class="text-center text-muted fs-5" class="financement-description">
+                            Profitez de prêts à faible taux pour financer l'achat d'équipements modernes ou l'amélioration de vos installations agricoles.
+                        </p>
+                        <a href="{% url 'pret' %}" class="financement-button text-white">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card financement-card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-handshake icon-style"></i>
+                        <h5 class="financement-title">Investissements & Partenariats</h5>
+                        <p class="text-center text-muted fs-5" class="financement-description">
+                            Recherchez des investisseurs ou des partenariats stratégiques pour financer des projets agricoles innovants et durables.
+                        </p>
+                        <a href="{% url 'investisseur' %}" class="financement-button text-white">Explorer les opportunités <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        
+        <!-- Call to Action -->
+        <div class="row text-center mt-5">
+            <div class="col">
+                <h3>Pourquoi Investir avec Nous.</h3>
+                <p class="text-center text-muted fs-5">Soutenez l'agriculture durable et la valorisation des produits locaux.</p>
+                <p class="text-center text-muted fs-5">Contribuez à la création d'emplois et au développement économique des communautés rurales.</p>
+                <p class="text-center text-muted fs-5">Bénéficiez de rendements attractifs tout en ayant un impact social positif.</p>
+                <!-- <a href="#" class="btn btn-lg btn-success text-white">Contactez-nous pour plus d'informations</a> -->
+            </div>
+        </div>
+
+
+        <div class="row text-center mt-5">
+            <div class="col">
+                <h3>Conditions d'Investissement</h3>
+                <p class="text-center text-muted fs-5">Soutenez l'agriculture durable et la valorisation des produits locaux.</p>
+                <p class="text-center text-muted fs-5">Contribuez à la création d'emplois et au développement économique des communautés rurales.</p>
+                <p class="text-center text-muted fs-5">Bénéficiez de rendements attractifs tout en ayant un impact social positif.</p>
+                <!-- <a href="#" class="btn btn-lg btn-success text-white">Contactez-nous pour plus d'informations</a> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Section Contact -->
+<section id="contact" class="contact section py-5">
+    <div class="container" data-aos="fade-up">
+        <div class="row gy-5 gx-lg-5">
+            
+            <!-- Informations de contact -->
+            <div class="col-lg-4">
+                <div class="card shadow-lg border-0 p-4">
+                    <h3 class="text-success"><i class="bi bi-info-circle"></i> Informations</h3>
+                    <p>Vous avez des questions ? Contactez-nous via les informations ci-dessous.</p>
+                    
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-geo-alt fs-4 text-success me-3"></i>
+                        <p class="mb-0">Cameroun, Yaoundé</p>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-envelope fs-4 text-success me-3"></i>
+                        <p class="mb-0">Africangreenfood@gmail.com</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-phone fs-4 text-success me-3"></i>
+                        <p class="mb-0">+237698050239</p>
+                    </div><div class="d-flex align-items-center">
+                        <i class="bi bi-phone fs-4 text-success me-3"></i>
+                        <p class="mb-0">+237671725755</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Formulaire de contact -->
+            <div class="col-lg-8">
+                <div class="card shadow-lg border-0 p-4">
+                    <h3 class="text-success"><i class="bi bi-chat-dots"></i> Envoyez-nous un message</h3>
+                    
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-danger{% endif %} alert-dismissible fade show mt-3" role="alert">
+                                {{ message }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+
+                    <form method="post" action="{% url 'contact' %}" class="mt-4">
+                        {% csrf_token %}
+                        
+                        <div class="mb-3">
+                            <label for="name" class="form-label fw-semibold"><i class="bi bi-person"></i> Nom</label>
+                            <input type="text" class="form-control" id="name" name="name" value="{{ form.name.value|default:'' }}" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-semibold"><i class="bi bi-envelope"></i> Adresse Email</label>
+                            <input type="email" class="form-control" id="email" name="email" value="{{ form.email.value|default:'' }}" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="subject" class="form-label fw-semibold"><i class="bi bi-pencil"></i> Numéro</label>
+                            <input type="text" class="form-control" id="number" name="number" value="{{ form.number.value|default:'' }}" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label fw-semibold"><i class="bi bi-chat-text"></i> Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" required>{{ form.message.value|default:'' }}</textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-success w-100 py-2 ">
+                            <i class="bi bi-send"></i> Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Fin de la section Contact -->
+
+
+
 
 {% endblock %}

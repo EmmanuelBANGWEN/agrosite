@@ -13,8 +13,17 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-        <div class="container">
+
+    <!-- <header id="header" class="header dark-background d-flex flex-column">
+        <i class="widget header-toggle d-xl-none bi bi-list"></i>
+    <style>
+      .widget {
+        background: linear-gradient(to right, #28a745, #c8f1c8);
+      }</style>
+      </header> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light  ">
+        <div class="container ">
             <a class="navbar-brand" href="{% url 'home' %}">
                 <img src="{% static 'img/africanlogo.png' %}" alt="Logo" height="60">
             </a>
@@ -28,21 +37,21 @@
                         <a class="nav-link" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'about' %}">About</a>
+                        <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'services' %}">Services</a>
+                        <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'produits' %}">Nos produits</a>
+                        <a class="nav-link" href="{% url 'produits' %}">Nos Produits</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'formations' %}">Formations</a>
+                        <a class="nav-link" href="#formations">Formations</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'financement' %}">Financement</a>
+                        <a class="nav-link" href="#financement">Financement</a>
                     </li><li class="nav-item">
-                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                   
                    
@@ -66,7 +75,7 @@
                 
                 <div class="col-md-4 mb-4 mb-md-0">
                     <h5 class="fw-bold">Contact</h5>
-                    <p><i class="fas fa-envelope"></i> Email : <a href="mailto:Africangreenfood@gmail.com" class="text-light">Africangreenfood@gmail.com</a></p>
+                    <p><i class="fas fa-envelope"></i> Email : <a href="mailto:africangreenfood@gmail.com" class="text-light">africangreenfood@gmail.com</a></p>
                     <p><i class="fas fa-phone"></i> Tél : +237698050239</p>
                     <p><i class="fas fa-phone"></i> Tél : +237671725755</p>
                     
@@ -91,7 +100,7 @@
             </div>
             <div class="row mt-4">
                 <div class="col text-center ">
-                    <p class="mb-0">© 2025 made by 
+                    <p class="mb-0">© 2025 Made by 
                         <a href="https://www.emmanuelbangwen.com/">Emmanuel Bangwen.</a></p>
                 </div>
             </div>

@@ -1,7 +1,85 @@
-{% extends 'base.html' %}
 {% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Plateforme Agroalimentaire{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="icon" type="image/png" href="{%static 'img/africanlogo.png'%}">
 
-{% block content %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <!-- <header id="header" class="header dark-background d-flex flex-column">
+        <i class="widget header-toggle d-xl-none bi bi-list"></i>
+    <style>
+      .widget {
+        background: linear-gradient(to right, #28a745, #c8f1c8);
+      }</style>
+      </header> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light  ">
+        <div class="container ">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="{% static 'img/africanlogo.png' %}" alt="Logo" height="60">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+            
+            <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li> -->
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'produits' %}">Nos Produits</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#formations">Formations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#financement">Financement</a>
+                    </li><li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li> -->
+                  
+                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+<style>
+    .btn-success {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-success:hover {
+transform: scale(1.1);
+box-shadow: 0 5px 15px #28a745;
+}
+
+.btn-success {
+background-color: #28a745;
+color:#28a745
+}
+.text-success {
+color:#28a745
+}
+
+</style>
 <body>
     <section class="container py-5">
         <!-- Titre principal -->
@@ -22,28 +100,10 @@
                         <i class="bi bi-cart"></i> Acheter
                     </a>
                 </div> -->
-                <style>
-                    .btn-success {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn-success:hover {
-    transform: scale(1.1);
-    box-shadow: 0 5px 15px #28a745;
-}
-
-.btn-success {
-    background-color: #28a745;
-    color:#28a745
-}
-.text-success {
-    color:#28a745
-}
-
-                </style>
+               
             </div>
             <div class="col-md-6">
-                <img src="{% static 'img/ghh02.jpg' %}" class="img-fluid rounded shadow" alt="Produit 1">
+                <img src="{% static 'img/fff.webp' %}" class="img-fluid rounded shadow" alt="Produit 1">
             </div>
             <div class="buy_bt mt-3">
                 <a href="{% url 'redirection_whatsapp1' %}" class="btn btn-success text-white">
@@ -68,7 +128,7 @@
              
             </div>
             <div class="col-md-6">
-                <img src="{% static 'img/ghh02.jpg' %}" class="img-fluid rounded shadow" alt="Produit 2">
+                <img src="{% static 'img/ghh1.jpg' %}" class="img-fluid rounded shadow" alt="Produit 2">
             </div>
             <div class="buy_bt mt-3 ">
                 <a href="{% url 'redirection_whatsapp2' %}" class="btn btn-success text-white"><i class="bi bi-cart"></i> Acheter</a>
@@ -83,7 +143,7 @@
                 
             </div>
             <div class="col-md-6">
-                <img src="{% static 'img/ghh02.jpg' %}" class="img-fluid rounded shadow" alt="Produit 3">
+                <img src="{% static 'img/g4.webp' %}" class="img-fluid rounded shadow" alt="Produit 3">
             </div>
             <div class="buy_bt mt-3">
                 <a href="{% url 'redirection_whatsapp3' %}" class="btn btn-success text-white"><i class="bi bi-cart"></i> Acheter</a>
@@ -98,7 +158,7 @@
                
             </div>
             <div class="col-md-6">
-                <img src="{% static 'img/ghh02.jpg' %}" class="img-fluid rounded shadow" alt="Produit 4">
+                <img src="{% static 'img/ghh1.jpg' %}" class="img-fluid rounded shadow" alt="Produit 4">
             </div>
             <div class="buy_bt mt-3">
                 <a href="{% url 'redirection_whatsapp4' %}" class="btn btn-success text-white"><i class="bi bi-cart"></i> Acheter</a>
@@ -138,7 +198,166 @@
         </div> -->
     </section>
 </body>
-{% endblock content %}
+</main>
+
+<footer class="bg-dark text-light py-5 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h5 class="fw-bold">À propos</h5>
+                <p><i class="fas fa-map-marker-alt"></i> Cameroun</p>
+                <p>Votre plateforme agroalimentaire de confiance, dédiée à la fourniture de produits frais et locaux.</p>
+            </div>
+            
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h5 class="fw-bold">Contact</h5>
+                <p><i class="fas fa-envelope"></i> Email : <a href="mailto:africangreenfood@gmail.com" class="text-light">africangreenfood@gmail.com</a></p>
+                <p><i class="fas fa-phone"></i> Tél : +237698050239</p>
+                <p><i class="fas fa-phone"></i> Tél : +237671725755</p>
+                
+            </div>
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h5 class="fw-bold">Suivez-nous</h5>
+                <div class="social-links">
+                    <a href="#" class="text-light me-3" title="Facebook">
+                        <i class="fab fa-facebook fa-lg"></i>
+                    </a>
+                    <!-- <a href="#" class="text-light me-3" title="Twitter">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </a> -->
+                    <a href="#" class="text-light" title="Instagram">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                    </a>
+                </div>
+
+                
+
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col text-center ">
+                <p class="mb-0">© 2025 Made by 
+                    <a href="https://www.emmanuelbangwen.com/">Emmanuel Bangwen.</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+<button id="backToTop" class="btn btn-success position-fixed bottom-0 end-0 m-3" style="display: none;"><i class="fas fa-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script>
+    window.addEventListener('scroll', function() {
+        document.getElementById('backToTop').style.display = (window.scrollY > 200) ? 'block' : 'none';
+    });
+    document.getElementById('backToTop').addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+<style>
+
+.navbar-nav {
+margin-left: auto !important; /* Pousse la liste à droite */
+}
+
+    /* ✅ Améliorer l'affichage et ajouter un fond vert clair aux liens */
+.navbar-nav .nav-item .nav-link {
+padding: 8px 15px;
+border-radius: 5px; /* Coins arrondis */
+margin: 5px; /* Espacement entre les liens */
+transition: background-color 0.3s ease-in-out;
+}
+
+/* ✅ Effet au survol */
+.navbar-nav .nav-item .nav-link:hover {
+background-color: rgba(0, 128, 0, 0.3);
+}
+
+/* ✅ Améliorer l'affichage mobile */
+@media (max-width: 991px) { 
+.navbar-nav {
+    text-align: center; /* Centrer les liens */
+
+}
+
+.navbar-nav .nav-item {
+    width: 100%; /* Chaque lien prend toute la largeur */
+}
+
+.navbar-nav .nav-item .nav-link {
+    display: block;
+    margin: 5px 0; /* Espacement vertical */
+}
+}
+a {
+text-decoration: none; /* Supprime le soulignement */}
+
+
+    footer {
+        background-color: #343a40;
+    }
+
+    footer h5 {
+        font-size: 1.25rem;
+        color: #f8f9fa;
+    }
+
+    footer p {
+        color: #d1d1d1;
+        font-size: 1rem;
+    }
+
+    .social-links a {
+        text-decoration: none;
+        color: #f8f9fa;
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+    }
+    .row a {
+        color: #1d9433;
+      
+    }
+
+    .social-links a:hover {
+        color: #1d9433;
+    }
+
+    .social-links a:focus {
+        outline: none;
+    }
+
+    footer .text-light {
+        color: #f8f9fa !important;
+    }
+
+    footer .container {
+        max-width: 1200px;
+    }
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+const navbarToggler = document.querySelector(".navbar-toggler");
+const navbarCollapse = document.querySelector("#navbarNav");
+
+navbarToggler.addEventListener("click", function () {
+    navbarCollapse.classList.toggle("show");
+});
+
+// Fermer la navigation en cliquant sur un lien
+document.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", function () {
+        navbarCollapse.classList.remove("show");
+    });
+});
+});
+
+</script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
+
 
 
 <style>
