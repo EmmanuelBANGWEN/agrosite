@@ -105,7 +105,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.6);
     z-index: 1;
 }
 .service-card .card-body {
@@ -113,10 +113,10 @@
     z-index: 2;
 }
 .features-section .col-md-5:nth-child(1) .service-card {
-    background-image: url('{% static "img/istockphoto-1280856062-612x612.jpg" %}');
+    background-image: url('{% static "img/ghh10.jpg" %}');
 }
 .features-section .col-md-5:nth-child(2) .service-card {
-    background-image: url('{% static "img/g4.webp" %}');
+    background-image: url('{% static "img/g3.png" %}');
 }
 .features-section .col-md-5:nth-child(3) .service-card {
     background-image: url('{% static "img/financement.png" %}');
@@ -143,7 +143,7 @@ Notre mission est de nourrir l'Afrique en créant des emplois et en valorisant l
             </p>
         </div>
         <div class="col-md-6">
-            <img src="{% static 'img/mission.png' %}" class="img-fluid rounded shadow" alt="Mission Image">
+            <img src="{% static 'img/mission.png' %}" class="img-fluid " alt="Mission Image">
         </div>
     </div>
 
@@ -157,7 +157,7 @@ Notre mission est de nourrir l'Afrique en créant des emplois et en valorisant l
             </p>
         </div>
         <div class="col-md-6">
-            <img src="{% static 'img/logo.png' %}" class="img-fluid rounded shadow" alt="History Image">
+            <img src="{% static 'img/logo.png' %}" class="img-fluid " alt="History Image">
         </div>
     </div>
 
@@ -275,12 +275,23 @@ Notre mission est de nourrir l'Afrique en créant des emplois et en valorisant l
     .formation-section {
         padding: 60px 0;
         background-color: #f4f4f4;
+        
     }
     .formation-card {
         border: none;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background: rgba(0, 0, 0, 1);
+
+    }    
+    .formation-card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background: rgba(0, 0, 0, 1);
+
     }
     .formation-card:hover {
         transform: translateY(-10px);
